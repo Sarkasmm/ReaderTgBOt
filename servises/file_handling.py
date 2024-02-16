@@ -1,7 +1,10 @@
+import sys
+import os
+
+BOOK_PATH = 'book/book.txt'
+PAGE_SIZE = 1000
+
 book: dict[int, str] = {}
-PAGE_SIZE = 100
-
-
 def prepare_book(path: str) -> None:
     page = 1
     with open(path, 'r', encoding='UTF-8') as file:
@@ -21,3 +24,4 @@ def _get_part_text(text, start, page_size):
         end -= 1
     return text[start:end + 1], len(text[start:end + 1])
 
+prepare_book(os.path.join(sys.path[0], os.path.normpath(BOOK_PATH)))

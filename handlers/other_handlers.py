@@ -1,6 +1,7 @@
-def main():
-    pass
+from aiogram import Router
+from aiogram.types import Message
+from lexicon.lexicon import LEXICON_RU
+from aiogram.filters import CommandStart, Command
 
 
-if __name__ == "__main__":
-    main()
+router = Router()

@@ -1,6 +1,4 @@
-def main():
-    pass
-
-
-if __name__ == "__main__":
-    main()
+template = {
+    'page': 1,
+    'bookmarks': set()
+}
