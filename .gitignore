@@ -1,8 +1,7 @@
-.venv/Lib
-/.venv/
+venv/Lib
 /.idea/
 .env
 .mypy_cache/
 __pycache__/
 
-
+/venv/

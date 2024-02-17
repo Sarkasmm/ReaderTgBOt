@@ -1,7 +1,11 @@
 from aiogram import Router
 from aiogram.types import Message
-from lexicon.lexicon import LEXICON_RU
-from aiogram.filters import CommandStart, Command
-
 
 router = Router()
+
+
+# Этот хэндлер будет реагировать на любые сообщения пользователя,
+# не предусмотренные логикой работы бота
+@router.message()
+async def send_echo(message: Message):
+    await message.answer('Мне ничего не нужно писать, просто читай')
